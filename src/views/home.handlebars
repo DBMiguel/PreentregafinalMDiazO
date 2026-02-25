@@ -1,0 +1,36 @@
+<h1>Bienvenido a Taquería POS</h1>
+<h3>Selecciona tu rol</h3>
+
+<div class="roles">
+  <button onclick="location.href='/mesero'">Mesero</button>
+  <button onclick="location.href='/cocinero'">Cocinero</button>
+  <button onclick="location.href='/jefe'">Jefe</button>
+  <button onclick="location.href='/administrador'">Admisnitrador</button>
+</div>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+  }
+  .roles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  button {
+    padding: 20px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+</style>

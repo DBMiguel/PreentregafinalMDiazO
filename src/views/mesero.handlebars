@@ -1,0 +1,74 @@
+<div class="container mt-4">
+
+<h2 class="text-center mb-4">Panel del Mesero</h2>
+
+<div class="card p-3 mb-4">
+    <h4>Seleccionar Mesa</h4>
+    <div class="d-flex gap-3 flex-wrap">
+        <button class="btn btn-success mesa" data-id="1"
+            onclick="seleccionarMesa(this,1)">Mesa 1</button>
+
+        <button class="btn btn-success mesa" data-id="2"
+            onclick="seleccionarMesa(this,2)">Mesa 2</button>
+
+        <button class="btn btn-success mesa" data-id="3"
+            onclick="seleccionarMesa(this,3)">Mesa 3</button>
+    </div>
+</div>
+
+<div class="card p-3 mb-4" id="seccionMenu" style="display:none;">
+    <h4>Menú</h4>
+    <table class="table table-bordered text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody id="bodyMenu"></tbody>
+    </table>
+
+    <button class="btn btn-primary" onclick="enviarPedido()">
+        Enviar Pedido
+    </button>
+</div>
+
+<div class="card p-3 mb-4">
+    <h4>Resumen del Pedido</h4>
+    <table class="table table-bordered text-center">
+        <thead class="table-secondary">
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="bodyResumen"></tbody>
+    </table>
+</div>
+
+<div class="card p-3">
+    <h4>Cuenta del Cliente</h4>
+    <table class="table table-bordered text-center">
+        <thead class="table-success">
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Mesero</th>
+            </tr>
+        </thead>
+        <tbody id="bodyCuenta"></tbody>
+    </table>
+
+    <h5 class="text-end">
+        Total Entregado: $<span id="totalEntregado">0</span>
+    </h5>
+</div>
+
+<button class="btn btn-danger mt-3" onclick="cerrarMesa()">
+    Cerrar Mesa
+</button>
+
+</div>

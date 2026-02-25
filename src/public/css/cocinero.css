@@ -1,0 +1,14 @@
+#ordenes p {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.preparando {
+    background-color: orange;
+}
+
+.lista {
+    background-color: green;
+}

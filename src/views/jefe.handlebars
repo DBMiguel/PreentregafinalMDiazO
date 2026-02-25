@@ -1,0 +1,42 @@
+<div class="container mt-4">
+
+  <h1 class="text-center mb-4">👑 Panel del Jefe</h1>
+
+
+  <!-- 📋 ÓRDENES MESERO (BEBIDAS) -->
+  <h3>🧃 Órdenes Mesero</h3>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Mesa</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Mesero</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaMesero"></tbody>
+  </table>
+
+
+  <!-- 🍳 ÓRDENES COCINA -->
+  <h3 class="mt-4">🍳 Órdenes Cocina</h3>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Mesa</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Mesero</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaCocina"></tbody>
+  </table>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/jefe.js"></script>

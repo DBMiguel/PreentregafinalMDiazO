@@ -1,0 +1,169 @@
+/* =====================
+  General
+===================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =====================
+  Encabezado
+===================== */
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+/* =====================
+  Mesas
+===================== */
+#mesas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#mesas button {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#mesas button:hover {
+  transform: scale(1.05);
+}
+
+/* Colores botones */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: black;
+}
+
+.btn-outline-success {
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+.btn-outline-danger {
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+/* =====================
+  Tarjeta de detalle de mesa
+===================== */
+.card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-body h4 {
+  margin-bottom: 10px;
+}
+
+.card-body h5 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* =====================
+  Ticket tipo tabla
+===================== */
+.ticket-row {
+  display: grid;
+  grid-template-columns: 1fr 50px 50px 20px 60px; /* nombre - cantidad - precio - = - subtotal */
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 0.95rem;
+}
+
+.ticket-row:last-child {
+  border-bottom: none;
+}
+
+.col-nombre {
+  font-weight: 500;
+}
+
+.col-cantidad, .col-precio, .col-igual, .col-subtotal {
+  text-align: right;
+}
+
+/* =====================
+  Mini menú agregar pedidos
+===================== */
+#menuPedidos .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menuPedidos button {
+  min-width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+/* =====================
+  Responsive
+===================== */
+@media (max-width: 600px) {
+  .ticket-row {
+    grid-template-columns: 1fr 40px 40px 15px 50px;
+    font-size: 0.85rem;
+  }
+
+  #mesas button {
+    width: 80px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  #menuPedidos button {
+    min-width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .ticket-row {
+    grid-template-columns: 1fr 35px 35px 15px 50px;
+    font-size: 0.8rem;
+  }
+
+  #mesas button {
+    width: 70px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+}

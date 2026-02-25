@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Taquería POS</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+{{#if css}}
+<link rel="stylesheet" href="/css/{{css}}">
+{{/if}}
+
+</head>
+<body>
+
+{{{body}}}
+
+<script src="/socket.io/socket.io.js"></script>
+
+{{#if js}}
+<script src="/js/{{js}}"></script>
+{{/if}}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

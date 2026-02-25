@@ -1,0 +1,111 @@
+<div class="container mt-4">
+
+  <h1 class="text-center mb-4 titulo-admin">🛠 Panel Administrador</h1>
+
+  <!-- 📊 RESUMEN GENERAL -->
+  <div class="row mb-4">
+
+    <div class="col-md-3">
+      <div class="card card-metrica">
+        <h5>Hoy</h5>
+        <p id="totalHoy">$0</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card card-metrica">
+        <h5>Semana</h5>
+        <p id="totalSemana">$0</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card card-metrica">
+        <h5>Mes</h5>
+        <p id="totalMes">$0</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card card-metrica">
+        <h5>Producto Top</h5>
+        <p id="productoTop">-</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 📅 FILTRO PERSONALIZADO -->
+  <div class="card p-4 mb-4">
+    <h4>📅 Reporte Personalizado</h4>
+
+    <div class="row mt-3">
+      <div class="col-md-4">
+        <input type="date" id="fechaInicio" class="form-control">
+      </div>
+
+      <div class="col-md-4">
+        <input type="date" id="fechaFin" class="form-control">
+      </div>
+
+      <div class="col-md-4">
+        <button class="btn btn-dark w-100" onclick="filtrarReporte()">
+          Generar Reporte
+        </button>
+      </div>
+    </div>
+
+    <h5 class="mt-4" id="totalFiltrado">Total: $0</h5>
+  </div>
+
+  <!-- 📋 TABLA HISTORIAL -->
+  <div class="card p-4">
+    <h4>📋 Historial de Ventas</h4>
+
+    <table class="table table-striped mt-3">
+      <thead class="table-dark">
+        <tr>
+          <th>Fecha</th>
+          <th>Mesa</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+          <th>Mesero</th>
+        </tr>
+      </thead>
+      <tbody id="tablaHistorial"></tbody>
+    </table>
+  </div>
+
+
+
+
+<!-- 📋 AUDITORÍA DE CAMBIOS -->
+<div class="card p-4 mt-4">
+  <h4>📋 Auditoría de Cambios</h4>
+
+  <table class="table table-striped mt-3">
+    <thead class="table-dark">
+      <tr>
+        <th>Fecha</th>
+        <th>Mesa</th>
+        <th>Producto</th>
+        <th>Mesero</th>
+        <th>Jefe</th>
+        <th>Tipo</th>
+        <th>Antes</th>
+        <th>Después</th>
+      </tr>
+    </thead>
+    <tbody id="tablaAuditoria"></tbody>
+  </table>
+</div>
+
+
+</div>
+
+
+<link rel="stylesheet" href="/css/administrador.css">
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/administrador.js"></script>
