@@ -7,8 +7,10 @@ import { fileURLToPath } from "url";
 import router from "./routes/views.router.js";
 import { menu } from "./data/menu.js";
 import PDFDocument from "pdfkit";
+import { connectDB } from "./config/db.js";
 
 const app = express();
+connectDB();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
@@ -246,3 +248,11 @@ httpServer.listen(PORT, () => {
   console.log(`📡 Tiempo Real:         http://localhost:${PORT}/realtimeproducts`);
   console.log("=========================================");
 });
+
+
+
+import productsRouter from "./routes/products.router.js"
+import cartsRouter from "./routes/carts.router.js"
+
+app.use("/api/products",productsRouter)
+app.use("/api/carts",cartsRouter)
